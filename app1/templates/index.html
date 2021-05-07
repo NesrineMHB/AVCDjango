@@ -1,264 +1,324 @@
 {% load static %}
 <!DOCTYPE html>
 <html class="no-js" lang="fr">
-	<head>
-		<meta charset="utf-8" />
+  <head>
+    <meta charset="utf-8" />
 
-		<title>ADM</title>
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ADM</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="shortcut icon" type="image/x-icon" href="img/logo-green-small-1x.png" />
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/logo-green-small-1x.png" /> -->
 
-		<!-- CSS here -->
-		
-		<link rel="stylesheet" href="{{ STATIC_URL }}css/style2.css" />
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- CSS here -->
 
-		<link rel="stylesheet" href="css/font-awesome.min.css" />
-		<link rel="stylesheet" href="css/themify-icons.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/vendors/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/vendors/font-awesome.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/vendors/themify-icons.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/vendors/animate.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/vendors/slicknav.css' %}"
+    />
 
-		<link rel="stylesheet" href="/css/animate.css" />
-		<link rel="stylesheet" href="/templates/css/slicknav.css" />
-		<link rel="stylesheet" href="/templates/css/style2.css" />
-	</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/style2.css' %}"
+    />
+  </head>
 
-	<body>
-		<header id="debut">
-			<div class="header-area ">
-				<div class="header-top_area">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-xl-6 col-md-12 col-lg-8">
-								<div class="short_contact_list">
-									<ul>
-										<li><a href="#"> <i class="fa fa-phone"></i> +33 663105549 </a></li>
-										<li><a href="#"> <i class="fa fa-envelope"></i>nesrine@gmail.com</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-xl-6 col-md-6 col-lg-4">
-								<div class="social_media_links d-none d-lg-block" style="margin-bottom: -2rem;">
-									
-									<a href="#" class="icon-button twitter"><i class="fa fa-twitter "></i><span></span></a>
-									<a href="#" class="icon-button facebook"><i class="fa fa-facebook  "></i><span></span></a>
-									<a href="#" class="icon-button instagram"><i class="fa fa-instagram "></i><span></span></a>
-									<a href="#" class="icon-button youtube"><i class="fa fa-youtube"></i><span></span></a>
-							
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="sticky-header" class="main-header-area">
-					<div class="container-fluid">
-						<div class="row align-items-center">
-							<div class="col-xl-3 col-lg-3">
-								<div style="height: 50%;" class="logo">
-									<a href="index.html">
-										<img  src="img/gouv.png" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="col-xl-9 col-lg-9">
-								<div class="main-menu">
-									<nav>
-										<ul id="navigation">
-											<li><a href="index.html">Accueil</a></li>
-											<li><a href="#about">A decouvrir <i class="ti-angle-down"></i></a>
-												<ul class="submenu" >
-													<li><a href="#about">A propos</a></li>
-													<li><a href="#missions">Le dignostique?</a></li>
-												</ul>
-											</li>
-											
-											<li><a href="#contact">Contact</a></li>
-										</ul>
-									</nav>
-									<div class="Appointment">
-										<div class="book_btn d-none d-lg-block">
-											<a data-scroll-nav='1' href="volenteer.html">se faire tester</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-12">
-								<div class="mobile_menu d-block d-lg-none"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
+  <body>
+    <header id="debut">
+      <div class="header-area">
+        <div class="header-top_area">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-6 col-md-12 col-lg-8">
+                <div class="short_contact_list">
+                  <ul>
+                    <li
+                      ><a href="#">
+                        <i class="fa fa-phone"></i> +33 663105549
+                      </a></li
+                    >
+                    <li
+                      ><a href="#">
+                        <i class="fa fa-envelope"></i>nesrine@gmail.com</a
+                      ></li
+                    >
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-6 col-md-6 col-lg-4">
+                <div
+                  class="social_media_links d-none d-lg-block"
+                  style="margin-bottom: -2rem"
+                >
+                  <a href="#" class="icon-button twitter"
+                    ><i class="fa fa-twitter"></i><span></span
+                  ></a>
+                  <a href="#" class="icon-button facebook"
+                    ><i class="fa fa-facebook"></i><span></span
+                  ></a>
+                  <a href="#" class="icon-button instagram"
+                    ><i class="fa fa-instagram"></i><span></span
+                  ></a>
+                  <a href="#" class="icon-button youtube"
+                    ><i class="fa fa-youtube"></i><span></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="sticky-header" class="main-header-area">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <div class="col-xl-3 col-lg-3">
+                <div style="height: 50%" class="logo">
+                  <a href="index.html">
+                    <img src="img/gouv.png" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9">
+                <div class="main-menu">
+                  <nav>
+                    <ul id="navigation">
+                      <li><a href="index.html">Accueil</a></li>
+                      <li
+                        ><a href="#about"
+                          >A decouvrir <i class="ti-angle-down"></i
+                        ></a>
+                        <ul class="submenu">
+                          <li><a href="#about">A propos</a></li>
+                          <li><a href="#missions">Le dignostique?</a></li>
+                        </ul>
+                      </li>
 
-		
-		<!-- ecriture sur les photo-->
-		<div class="slider_area">
-			<div class="single_slider d-flex align-items-center slider_bg_1 overlay2">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-9">
-							<div class="slider_text t2">
-								<span></span>
-								<h3></h3>
-								<p></p>
-								<a href="#section-tours" class="btn btn--white btn--animated">Nous rejoindre</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                      <li><a href="#contact">Contact</a></li>
+                    </ul>
+                  </nav>
+                  <div class="Appointment">
+                    <div class="book_btn d-none d-lg-block">
+                      <a data-scroll-nav="1" href="volenteer.html"
+                        >se faire tester</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-		<!--Nos missions-->
+    <!-- ecriture sur les photo-->
+    <div class="slider_area">
+      <div class="single_slider d-flex align-items-center slider_bg_1 overlay2">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="slider_text t2">
+                <span></span>
+                <h3></h3>
+                <p></p>
+                <a href="#section-tours" class="btn btn--white btn--animated"
+                  >Nous rejoindre</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<section class="section-features">
-			<div class="u-center-text">
-				<h3 class="heading-secondary">
-					SE faire tester n'a jamais était aussi facile
-				</h3>
-			</div>
-			<div class="row js--wp-3">
-				<div class="col--1-of-3">
-					<div class="feature-box m1">
-						<img src="./img/icone/bilan-de-sante.png" style="width: 25%;height: 20%;" />
-						<h3 class="u-margin-bottom-small">1.Bilan</h3>
-						<p class="feature-box__text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente kkkkkkkkk
-							aspernatur.
-						</p>
-						<a href="#popup1" class="btn-text">2.Remplir le formulaire&rarr;</a>
-					</div>
-				</div>
+    <!--Nos missions-->
 
-				<div class="col--1-of-3">
-					<div class="feature-box m2">
-						<img src="./img/icone/consent.png" style="width: 25%;height: 20%;" />
-						<h3 class="u-margin-bottom-small">2.Remplir le formulaire</h3>
-						<p class="feature-box__text">
-							Partager ses experiences Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-							ipsum
-						</p>
-						<a href="#contact" class="btn-text">Nous contacter&rarr;</a>
-					</div>
-				</div>
+    <section class="section-features">
+      <div class="u-center-text">
+        <h3 class="heading-secondary">
+          SE faire tester n'a jamais était aussi facile
+        </h3>
+      </div>
+      <div class="row js--wp-3">
+        <div class="col--1-of-3">
+          <div class="feature-box m1">
+            <img
+              src="./img/icone/bilan-de-sante.png"
+              style="width: 25%; height: 20%"
+            />
+            <h3 class="u-margin-bottom-small">1.Bilan</h3>
+            <p class="feature-box__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              ipsum sapiente kkkkkkkkk aspernatur.
+            </p>
+            <a href="#popup1" class="btn-text">2.Remplir le formulaire&rarr;</a>
+          </div>
+        </div>
 
-				<div class="col--1-of-3">
-					<div class="feature-box m3">
-						<img src="./img/icone/research.png" style="width: 25%;height: 20%;" />
-						<h3 class="u-margin-bottom-small">3.Le resultat</h3>
-						<p class="feature-box__text">
-							idée son mission Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapiente
-							aspernatur.
-						</p>
-						<a href="#popup3" class="btn-text">Adherer &rarr;</a>
-					</div>
-				</div>
-			</div>
-		</section>
+        <div class="col--1-of-3">
+          <div class="feature-box m2">
+            <img
+              src="./img/icone/consent.png"
+              style="width: 25%; height: 20%"
+            />
+            <h3 class="u-margin-bottom-small">2.Remplir le formulaire</h3>
+            <p class="feature-box__text">
+              Partager ses experiences Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Aperiam, ipsum
+            </p>
+            <a href="#contact" class="btn-text">Nous contacter&rarr;</a>
+          </div>
+        </div>
 
-		<section class="about" id="about">
-			<div class="glisse">
-				<h3 class="heading-secondary">Au delà de la maladie?</h3>
-			</div>
+        <div class="col--1-of-3">
+          <div class="feature-box m3">
+            <img
+              src="./img/icone/research.png"
+              style="width: 25%; height: 20%"
+            />
+            <h3 class="u-margin-bottom-small">3.Le resultat</h3>
+            <p class="feature-box__text">
+              idée son mission Lorem ipsum dolor sit amet consectetur adg mmm
+              mmm kkkkkk ipsum sapiente aspernatur.
+            </p>
+            <a href="#popup3" class="btn-text">Adherer &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-			<div class="glisse2">
-				<p>
-					Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapie Lorem ipsum dolor sit amet
-					consectetur adg mmm mmm kkkkkk ipsum sapie Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk
-					ipsum sapie Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapie Lorem ipsum dolor
-					sit amet consectetur adg mmm mmm kkkkkk ipsum sapie Lorem ipsum dolor sit amet consectetur adg mmm
-					mmm kkkkkk ipsum sapie Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapie
-				</p>
-			</div>
-		</section>
+    <section class="about" id="about">
+      <div class="glisse">
+        <h3 class="heading-secondary">Au delà de la maladie?</h3>
+      </div>
 
-		<section class="section-missions" id="missions">
-			<div class="u-center-text">
-				<h3 class="heading-secondary">
-					<text style="color: red;">A</text>ccident
-					<text style="color: red;">V</text>asculaire
-					<text style="color: red;">C</text>erebrale
-				</h3>
-			</div>
+      <div class="glisse2">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapie
+          Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapie
+          Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapie
+          Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapie
+          Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapie
+          Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapie
+          Lorem ipsum dolor sit amet consectetur adg mmm mmm kkkkkk ipsum sapie
+        </p>
+      </div>
+    </section>
 
-			<div class="row">
-				<div class="col--1-of-2">
-					<div class="composition">
-						<img
-							srcset="
-								img/symp3.jpg  300w,
-								img/symp3.jpg 1000w
-							"
-							sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-							alt="Photo 1"
-							class="composition__photo composition__photo--p1"
-							src="img/symp3.jpg"
-						/>
+    <section class="section-missions" id="missions">
+      <div class="u-center-text">
+        <h3 class="heading-secondary">
+          <text style="color: red">A</text>ccident
+          <text style="color: red">V</text>asculaire
+          <text style="color: red">C</text>erebrale
+        </h3>
+      </div>
 
-						<img
-							srcset="img/symptom1.jpeg 300w, img/symptom1.jpeg 1000w"
-							sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-							alt="Photo 2"
-							class="composition__photo composition__photo--p2"
-							src="img/symptom1.jpeg"
-						/>
+      <div class="row">
+        <div class="col--1-of-2">
+          <div class="composition">
+            <img
+              srcset="img/symp3.jpg 300w, img/symp3.jpg 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              alt="Photo 1"
+              class="composition__photo composition__photo--p1"
+              src="img/symp3.jpg"
+            />
 
-						
+            <img
+              srcset="img/symptom1.jpeg 300w, img/symptom1.jpeg 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              alt="Photo 2"
+              class="composition__photo composition__photo--p2"
+              src="img/symptom1.jpeg"
+            />
 
-						<img
-							srcset="img/symp3.jpg 300w, img/symp3.jpg 1000w"
-							sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-							alt="Photo 3"
-							class="composition__photo composition__photo--p3"
-							src="img/symp3.jpg"
-						/>
-						
-					</div>
-				</div>
-				<div class="col--1-of-2">
-					<span
-						><h3 class="heading-tertiary" onclick="maFonction('m1')">
-							Qu'est ce qu'un AVC ?
-							<i class="ti-angle-down" style="right: 5px; position: absolute;"></i></h3
-					></span>
-					<div id="m1" style="display: none;">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur
-							libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-						</p>
-					</div>
+            <img
+              srcset="img/symp3.jpg 300w, img/symp3.jpg 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              alt="Photo 3"
+              class="composition__photo composition__photo--p3"
+              src="img/symp3.jpg"
+            />
+          </div>
+        </div>
+        <div class="col--1-of-2">
+          <span
+            ><h3 class="heading-tertiary" onclick="maFonction('m1')">
+              Qu'est ce qu'un AVC ?
+              <i
+                class="ti-angle-down"
+                style="right: 5px; position: absolute"
+              ></i></h3
+          ></span>
+          <div id="m1" style="display: none">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              ipsum sapiente aspernatur libero repellat quis consequatur ducimus
+              quam nisi exercitationem omnis earum qui.
+            </p>
+          </div>
 
-					<span
-						><h3 class="heading-tertiary" onclick="maFonction('m2')">
-							Les symptomes AVC 
-							<i class="ti-angle-down" style="right: 5px; position: absolute;"></i></h3
-					></span>
-					<div id="m2" style="display: none;">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur
-							libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-						</p>
-					</div>
+          <span
+            ><h3 class="heading-tertiary" onclick="maFonction('m2')">
+              Les symptomes AVC
+              <i
+                class="ti-angle-down"
+                style="right: 5px; position: absolute"
+              ></i></h3
+          ></span>
+          <div id="m2" style="display: none">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              ipsum sapiente aspernatur libero repellat quis consequatur ducimus
+              quam nisi exercitationem omnis earum qui.
+            </p>
+          </div>
 
-					<span
-						><h3 class="heading-tertiary" onclick="maFonction('maDIV1')">
-							Comment reagire ?
-							<i class="ti-angle-down" style="right: 5px; position: absolute;"></i></h3
-					></span>
-					<div id="maDIV1" style="display: none;">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur
-							libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-						</p>
-					</div>
+          <span
+            ><h3 class="heading-tertiary" onclick="maFonction('maDIV1')">
+              Comment reagire ?
+              <i
+                class="ti-angle-down"
+                style="right: 5px; position: absolute"
+              ></i></h3
+          ></span>
+          <div id="maDIV1" style="display: none">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              ipsum sapiente aspernatur libero repellat quis consequatur ducimus
+              quam nisi exercitationem omnis earum qui.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					
-				</div>
-			</div>
-		</section>
-
-		<!--<section class="section-contact" id="contact">
+    <!--<section class="section-contact" id="contact">
 			<div class="row">
 				<div class="contact">
 					<div class="contact__form">
@@ -366,121 +426,161 @@
 			</div>
 		</section>
 	-->
-		<footer class="footer">
-			<div class="u-center-text" style="margin-bottom: -1rem; font-size: 30px; font-weight: 200;">
-				<h3 class="heading-secondary" style="font-size: 20px; font-weight: 300; color: antiquewhite;">
-					souscrire à notre NewsLetters
-				</h3>
-			</div>
-			<div style="text-align: center; max-width: 60%; margin-left: 20%;">
-				<form id="form1" enctype="multipart/form-data" method="post" action="connection.php" class="form">
-					<div class="form__group" style="position: relative;">
-						<input
-							type="email"
-							class="form__input"
-							style="width: 100%;"
-							placeholder="Email address"
-							id="email"
-							name="email"
-							required
-						/>
-						<label for="email" class="form__label" style="color: antiquewhite;">Votre adresse mail</label>
-						<input
-							style="
-								position: absolute;
-								top: 0;
-								right: 0;
-								margin-top: 2%;
-								color: transparent;
-								background-color: transparent;
-								z-index: 800;
-								cursor: pointer;
-								border-color: transparent;
-							"
-							type="submit"
-							name="newsletter"
-							id="newsletter"
-							value="Envoyer"
-						/>
-						<img
-							style="position: absolute; top: 0; right: 0; margin-top: 2%;"
-							src="https://img.icons8.com/color/48/000000/send-mass-email.png"
-						/>
-					</div>
-				</form>
-			</div>
-			<div class="row">
-				<div class="col--1-of-3 c1">
-					<div class="u-center-text" style="font-size: 30px; font-weight: 200;">
-						<h3
-							class="heading-secondary"
-							style="font-size: 20px; font-weight: 300; color: antiquewhite; margin-bottom: 20px;"
-						>
-							Plus
-						</h3>
-						<p>ADM Copyright &copy; ++++ logo</p>
-					</div>
-				</div>
+    <footer class="footer">
+      <div
+        class="u-center-text"
+        style="margin-bottom: -1rem; font-size: 30px; font-weight: 200"
+      >
+        <h3
+          class="heading-secondary"
+          style="font-size: 20px; font-weight: 300; color: antiquewhite"
+        >
+          souscrire à notre NewsLetters
+        </h3>
+      </div>
+      <div style="text-align: center; max-width: 60%; margin-left: 20%">
+        <form
+          id="form1"
+          enctype="multipart/form-data"
+          method="post"
+          action="connection.php"
+          class="form"
+        >
+          <div class="form__group" style="position: relative">
+            <input
+              type="email"
+              class="form__input"
+              style="width: 100%"
+              placeholder="Email address"
+              id="email"
+              name="email"
+              required
+            />
+            <label for="email" class="form__label" style="color: antiquewhite"
+              >Votre adresse mail</label
+            >
+            <input
+              style="
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-top: 2%;
+                color: transparent;
+                background-color: transparent;
+                z-index: 800;
+                cursor: pointer;
+                border-color: transparent;
+              "
+              type="submit"
+              name="newsletter"
+              id="newsletter"
+              value="Envoyer"
+            />
+            <img
+              style="position: absolute; top: 0; right: 0; margin-top: 2%"
+              src="https://img.icons8.com/color/48/000000/send-mass-email.png"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col--1-of-3 c1">
+          <div class="u-center-text" style="font-size: 30px; font-weight: 200">
+            <h3
+              class="heading-secondary"
+              style="
+                font-size: 20px;
+                font-weight: 300;
+                color: antiquewhite;
+                margin-bottom: 20px;
+              "
+            >
+              Plus
+            </h3>
+            <p>ADM Copyright &copy; ++++ logo</p>
+          </div>
+        </div>
 
-				<div class="col--1-of-3 c2">
-					<div class="u-center-text" style="margin-bottom: -2rem; font-size: 30px; font-weight: 200;">
-						<h3
-							class="heading-secondary"
-							style="font-size: 20px; font-weight: 300; color: antiquewhite; margin-bottom: 20px;"
-						>
-							Suivez-nous sur
-						</h3>
-						<div>
-							<a href="#" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a>
-							<a href="#" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a>
-							<a href="#" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a>
-							<a href="#" class="icon-button youtube"><i class="fa fa-youtube"></i><span></span></a>
-						</div>
-					</div>
-				</div>
+        <div class="col--1-of-3 c2">
+          <div
+            class="u-center-text"
+            style="margin-bottom: -2rem; font-size: 30px; font-weight: 200"
+          >
+            <h3
+              class="heading-secondary"
+              style="
+                font-size: 20px;
+                font-weight: 300;
+                color: antiquewhite;
+                margin-bottom: 20px;
+              "
+            >
+              Suivez-nous sur
+            </h3>
+            <div>
+              <a href="#" class="icon-button twitter"
+                ><i class="fa fa-twitter"></i><span></span
+              ></a>
+              <a href="#" class="icon-button facebook"
+                ><i class="fa fa-facebook"></i><span></span
+              ></a>
+              <a href="#" class="icon-button instagram"
+                ><i class="fa fa-instagram"></i><span></span
+              ></a>
+              <a href="#" class="icon-button youtube"
+                ><i class="fa fa-youtube"></i><span></span
+              ></a>
+            </div>
+          </div>
+        </div>
 
-				<div class="col--1-of-3 c3">
-					<div class="u-center-text" style="margin-bottom: -2rem; font-size: 30px; font-weight: 200;">
-						<h3
-							class="heading-secondary"
-							style="font-size: 20px; font-weight: 300; color: antiquewhite; margin-bottom: 20px;"
-						>
-							Contact
-						</h3>
-						<div class="short_contact_list">
-							<div>
-								<a href="#"> <i class="fa fa-phone"></i> +33 663105549 </a>
-							</div>
-							<a href="#"> <i class="fa fa-envelope"></i>nesrine@gmail.com</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
+        <div class="col--1-of-3 c3">
+          <div
+            class="u-center-text"
+            style="margin-bottom: -2rem; font-size: 30px; font-weight: 200"
+          >
+            <h3
+              class="heading-secondary"
+              style="
+                font-size: 20px;
+                font-weight: 300;
+                color: antiquewhite;
+                margin-bottom: 20px;
+              "
+            >
+              Contact
+            </h3>
+            <div class="short_contact_list">
+              <div>
+                <a href="#"> <i class="fa fa-phone"></i> +33 663105549 </a>
+              </div>
+              <a href="#"> <i class="fa fa-envelope"></i>nesrine@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-		<script>
-			function maFonction(d) {
-				var div = document.getElementById(d);
-				if (div.style.display === 'none') {
-					div.style.display = 'block';
-				} else {
-					div.style.display = 'none';
-				}
-			}
-		</script>
-		<!-- JS here -->
-		<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script>
+      function maFonction(d) {
+        var div = document.getElementById(d);
+        if (div.style.display === "none") {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      }
+    </script>
+    <!-- JS here -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src=" {% static 'app1/js/vendors/modernizr-3.5.0.min.js' %}"></script>
+    <script src=" {% static 'app1/js/vendors/jquery-1.12.4.min.js' %}"></script>
+    <script src=" {% static 'app1/js/vendors/waypoints.min.js' %}"></script>
+    <script src=" {% static 'app1/js/vendors/nice-select.min.js' %}"></script>
+    <script src=" {% static 'app1/js/vendors/jquery.slicknav.min.js' %}"></script>
 
-		<script src="js/vendor/modernizr-3.5.0.min.js"></script>
-		<script src="js/vendor/jquery-1.12.4.min.js"></script>
-
-		<script src="js/waypoints.min.js"></script>
-
-		<script src="js/nice-select.min.js"></script>
-		<script src="js/jquery.slicknav.min.js"></script>
-
-		<script src="js/main.js"></script>
-	</body>
+    <script src=" {% static 'app1/js/main.js' %}"></script>
+  </body>
 </html>
