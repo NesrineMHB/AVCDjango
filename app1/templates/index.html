@@ -8,7 +8,6 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/logo-green-small-1x.png" /> -->
 
     <!-- CSS here -->
 
@@ -95,7 +94,7 @@
               <div class="col-xl-3 col-lg-3">
                 <div style="height: 50%" class="logo">
                   <a href="index.html">
-                    <img src="img/gouv.png" alt="" />
+                    <img src="{% static 'app1/img/gouv.png' %}" alt="" />
                   </a>
                 </div>
               </div>
@@ -167,7 +166,7 @@
         <div class="col--1-of-3">
           <div class="feature-box m1">
             <img
-              src="./img/icone/bilan-de-sante.png"
+              src="{% static 'app1/img/icone/bilan-de-sante.png' %}"
               style="width: 25%; height: 20%"
             />
             <h3 class="u-margin-bottom-small">1.Bilan</h3>
@@ -182,7 +181,7 @@
         <div class="col--1-of-3">
           <div class="feature-box m2">
             <img
-              src="./img/icone/consent.png"
+              src="{% static 'app1/img/icone/consent.png' %}"
               style="width: 25%; height: 20%"
             />
             <h3 class="u-margin-bottom-small">2.Remplir le formulaire</h3>
@@ -197,7 +196,7 @@
         <div class="col--1-of-3">
           <div class="feature-box m3">
             <img
-              src="./img/icone/research.png"
+              src="{% static 'app1/img/icone/research.png' %}"
               style="width: 25%; height: 20%"
             />
             <h3 class="u-margin-bottom-small">3.Le resultat</h3>
@@ -242,27 +241,27 @@
         <div class="col--1-of-2">
           <div class="composition">
             <img
-              srcset="img/symp3.jpg 300w, img/symp3.jpg 1000w"
+              srcset="{% static 'app1/img/symp3.jpg' %}" 300w, "{% static 'app1/img/symp3.jpg' %}" 1000w'
               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
               alt="Photo 1"
               class="composition__photo composition__photo--p1"
-              src="img/symp3.jpg"
+              src="{% static 'app1/img/symp3.jpg' %}"
             />
 
             <img
-              srcset="img/symptom1.jpeg 300w, img/symptom1.jpeg 1000w"
+              srcset="{% static 'app1/img/symptom1.jpeg' %}" 300w, "{% static 'app1/img/symptom1.jpeg' %}" 1000w'
               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
               alt="Photo 2"
               class="composition__photo composition__photo--p2"
-              src="img/symptom1.jpeg"
+              src="{% static 'app1/img/symptom1.jpg' %}"
             />
 
             <img
-              srcset="img/symp3.jpg 300w, img/symp3.jpg 1000w"
+              srcset="{% static 'app1/img/symp2.jpg' %}" 300w, "{% static 'app1/img/symp2.jpg' %}" 1000w'
               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
               alt="Photo 3"
               class="composition__photo composition__photo--p3"
-              src="img/symp3.jpg"
+              src="{% static 'app1/img/symp3.jpg' %}"
             />
           </div>
         </div>
@@ -318,114 +317,7 @@
       </div>
     </section>
 
-    <!--<section class="section-contact" id="contact">
-			<div class="row">
-				<div class="contact">
-					<div class="contact__form">
-						<form
-							id="form"
-							enctype="multipart/form-data"
-							method="post"
-							action="connection.php"
-							class="form"
-						>
-							<h3 class="heading-secondary">
-								Contactez-nous
-							</h3>
-
-							<div class="form__group">
-								<input
-									type="text"
-									class="form__input"
-									placeholder="Full name"
-									id="name"
-									name="name"
-									required
-								/>
-								<label for="name" class="form__label">Votre nom complet</label>
-							</div>
-
-							<div class="form__group">
-								<input
-									type="email"
-									class="form__input"
-									placeholder="Email address"
-									id="email"
-									name="email"
-									required
-								/>
-								<label for="email" class="form__label">Votre adresse mail</label>
-							</div>
-
-							<div class="form__group u-margin-bottom-medium">
-								<div style="display: inline-block; margin-right: 10%; margin-bottom: 10px;">
-									Souscrire à notre NewsLetters :
-								</div>
-								<div class="form__radio-group">
-									<input type="radio" class="form__radio-input" id="small" name="newl" value="1" />
-									<label for="small" class="form__radio-label">
-										<span class="form__radio-button"></span>
-										Oui
-									</label>
-								</div>
-
-								<div class="form__radio-group">
-									<input type="radio" class="form__radio-input" id="large" name="newl" value="0" />
-									<label for="large" class="form__radio-label">
-										<span class="form__radio-button"></span>
-										Non
-									</label>
-								</div>
-							</div>
-
-							<div class="form__group">
-								<textarea
-									type="text"
-									class="form__input"
-									placeholder="votre message"
-									id="message"
-									name="message"
-									required
-								></textarea>
-								<label for="message" class="form__label">Nous somme ravie d'entendre de vous</label>
-							</div>
-						
-                        
-							<div class="form__group">
-								<div>
-									<input
-										class="btn btn--white btn--animated"
-										type="submit"
-										name="send"
-										id="send"
-										value="Envoyer"
-									/>
-								</div>
-								<div style="margin-top: 1rem;">
-									<a href="#" class="icon-button twitter"
-										><i class="fa fa-twitter"></i><span></span
-									></a>
-									<a href="#" class="icon-button facebook"
-										><i class="fa fa-facebook"></i><span></span
-									></a>
-									<a href="#" class="icon-button instagram"
-										><i class="fa fa-instagram"></i><span></span
-									></a>
-									<a href="#" class="icon-button youtube"
-										><i class="fa fa-youtube"></i><span></span
-									></a>
-								</div>
-							</div>
-							<div class="plus">
-								<a href="#" style="margin-right: 5rem;"> <i class="fa fa-phone"></i> +33 663105549 </a>
-								<a href="#"> <i class="fa fa-envelope"></i>nesrine@gmail.com</a>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-	-->
+   
     <footer class="footer">
       <div
         class="u-center-text"

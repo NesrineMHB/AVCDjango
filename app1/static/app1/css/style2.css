@@ -384,10 +384,10 @@ h3 {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
-  background-color: #3cc1e2;
+  background-color: #0a194d;
   color: #ffffff; }
   .btn--white::after {
-    background-color: #3cc1e2; }
+    background-color: #0a194d; }
 
 .btn::after {
   content: '';
@@ -880,7 +880,8 @@ p {
   font-size: 1rem;
   cursor: pointer;
   position: relative;
-  padding-left: 4.5rem; }
+  padding-left: 2rem; 
+ }
 
 .form__radio-button {
   height: 1.5rem;

@@ -1,93 +1,137 @@
-<!doctype html>
+{% load static %}
+<!DOCTYPE html>
 <html class="no-js" lang="fr">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-    <meta charset="utf-8">
-   
-    <title>Gouv</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADM</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo-green-small-1x.png">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-   
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style2.css">
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/vendors/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/vendors/font-awesome.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/vendors/themify-icons.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/vendors/animate.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/vendors/slicknav.css' %}"
+    />
 
-<body>
-  
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app1/css/style2.css' %}"
+    />
+  </head>
+
+  <body>
     <header id="debut">
-        <div class="header-area ">
-            <div class="header-top_area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-6 col-md-12 col-lg-8">
-                            <div class="short_contact_list">
-                                <ul>
-                                    <li><a href="#"> <i class="fa fa-phone"></i> +33 663105549 </a></li>
-                                    <li><a href="#"> <i class="fa fa-envelope"></i>nesrine@gmail.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-md-6 col-lg-4">
-                            <div class="social_media_links d-none d-lg-block" style="margin-bottom: -2rem;">
-                                
-                                <a href="#" class="icon-button twitter"><i class="fa fa-twitter "></i><span></span></a>
-                                <a href="#" class="icon-button facebook"><i class="fa fa-facebook  "></i><span></span></a>
-                                <a href="#" class="icon-button instagram"><i class="fa fa-instagram "></i><span></span></a>
-                                <a href="#" class="icon-button youtube"><i class="fa fa-youtube"></i><span></span></a>
-                        
-                        </div>
-                        </div>
-                    </div>
+      <div class="header-area">
+        <div class="header-top_area">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-6 col-md-12 col-lg-8">
+                <div class="short_contact_list">
+                  <ul>
+                    <li
+                      ><a href="#">
+                        <i class="fa fa-phone"></i> +33 663105549
+                      </a></li
+                    >
+                    <li
+                      ><a href="#">
+                        <i class="fa fa-envelope"></i>nesrine@gmail.com</a
+                      ></li
+                    >
+                  </ul>
                 </div>
-            </div>
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-xl-3 col-lg-3">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="img/gouv.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xl-9 col-lg-9">
-                            <div class="main-menu">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a href="index.html">Accueil</a></li>
-                                        <li><a href="#about">A decouvrir <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu" >
-                                                <li><a href="#about">A propos</a></li>
-                                                <li><a href="#missions">Le dignostique?</a></li>
-                                            </ul>
-                                        </li>
-                                        
-                                        <li><a href="#contact">Contact</a></li>
-                                    </ul>
-                                </nav>
-                                <div class="Appointment">
-                                    <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="volenteer.html">se faire tester</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-xl-6 col-md-6 col-lg-4">
+                <div
+                  class="social_media_links d-none d-lg-block"
+                  style="margin-bottom: -2rem"
+                >
+                  <a href="#" class="icon-button twitter"
+                    ><i class="fa fa-twitter"></i><span></span
+                  ></a>
+                  <a href="#" class="icon-button facebook"
+                    ><i class="fa fa-facebook"></i><span></span
+                  ></a>
+                  <a href="#" class="icon-button instagram"
+                    ><i class="fa fa-instagram"></i><span></span
+                  ></a>
+                  <a href="#" class="icon-button youtube"
+                    ><i class="fa fa-youtube"></i><span></span
+                  ></a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div id="sticky-header" class="main-header-area">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <div class="col-xl-3 col-lg-3">
+                <div style="height: 50%" class="logo">
+                  <a href="index.html">
+                    <img src="{% static 'app1/img/gouv.png' %}" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9">
+                <div class="main-menu">
+                  <nav>
+                    <ul id="navigation">
+                      <li><a href="index.html">Accueil</a></li>
+                      <li
+                        ><a href="#about"
+                          >A decouvrir <i class="ti-angle-down"></i
+                        ></a>
+                        <ul class="submenu">
+                          <li><a href="#about">A propos</a></li>
+                          <li><a href="#missions">Le dignostique?</a></li>
+                        </ul>
+                      </li>
+
+                      <li><a href="#contact">Contact</a></li>
+                    </ul>
+                  </nav>
+                  <div class="Appointment">
+                    <div class="book_btn d-none d-lg-block">
+                      <a data-scroll-nav="1" href="volenteer.html"
+                        >se faire tester</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- header-end -->
 
@@ -104,133 +148,370 @@
 
     
 
+   
     <section class=" section-volunteer">
         <div class="u-center-text ">
             <p class="feature-box__text">
-                Partager ses experiences Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+            ajouter des * et dire que tous les champs sont obligatoires
+                <br>Partager ses experiences Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
                 ipsum
             </p>
         </div>
 
         <div class="contact-wrap">
-        <form action="" class="contact-form">
-          <div class="col-sm-12">
-            <div class="input-block">
-              <label for="">First Name</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-          <div class="col-sm-12">
-            <div class="input-block">
-              <label for="">Last Name</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-          <div class="col-sm-12">
-            <div class="input-block">
-              <label for="">Email</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-          <div class="col-sm-12">
-            <div class="input-block">
-              <label for="">Message Subject</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-          <div class="col-sm-12">
-            <div class="input-block textarea">
-              <label for="">Drop your message here</label>
-              <textarea rows="3" type="text" class="form-control"></textarea>
-            </div>
-          </div>
-          <div class="col-sm-12">
-            <button class="square-button">Send</button>
-          </div>
-        </form>
-    </div>
-      </section>
-
-    <footer>
-        <footer class="footer">
-
-            
-            <div class="u-center-text " style="margin-bottom: -1rem; font-size: 30px ;font-weight: 200;">
-                <h3 class="heading-secondary" style=" font-size: 20px ;font-weight: 300;color:antiquewhite;">
-                    souscrire à notre NewsLetters
-                </h3>
-            </div>
-            <div style="text-align: center;max-width: 60%; margin-left: 20%; ">
-
-                <form action="#" class="form" >
-                    <div class="form__group" style="position: relative;">
-                        <input type="email" class="form__input" style="width: 100%;" placeholder="Email address" id="email" required>
-                        <label for="email" class="form__label" style="color:antiquewhite">Votre adresse mail</label>
-                        <a href="" style="position: absolute;top: 0;right: 0;margin-top: 2%;  "><img src="https://img.icons8.com/color/48/000000/send-mass-email.png"/></a>
+            <form action="" class="contact-form">
+                
+                <div class="form__group u-margin-bottom-medium">
+                    <div style="display: inline-block; margin-right: 2%; margin-bottom: 10px; margin-left: 2rem;">
+                        Genre :
+                     </div>
+                    <div class="form__radio-group">
+                        <input required="required" type="radio" class="form__radio-input" id="smal" name="genre" value="0" />
+                        <label for="small" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Femme
+                        </label>
                     </div>
-                </form>
+
+                    <div class="form__radio-group">
+                        <input required="required"type="radio" class="form__radio-input" id="large" name="genre" value="1" />
+                        <label for="large" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Homme
+                        </label>
+                    </div>
+
+                    <div class="form__radio-group">
+                        <input required="required" type="radio" class="form__radio-input" id="autre" name="genre" value="2" />
+                        <label for="autre" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Autre
+                        </label>
+                    </div>
+                 </div>
 
 
-                
-            </div>
-            <div class="row">
-                
-                <div class="col--1-of-3 c1">
-                    <div class="u-center-text " style=" font-size: 30px ;font-weight: 200;">
-                        <h3 class="heading-secondary" style=" font-size: 20px ;font-weight: 300;color:antiquewhite;margin-bottom: 20px;">
-                            Plus 
-                        </h3>
-                        <p>ADM Copyright &copy; ++++ logo</p>
-
+                 <div class="col-sm-12">
+                    <div class="input-block">
+                       <label for="">Age</label>
+                       <input type="text" name="age" required="required" class="form-control">
                     </div>
                 </div>
-               
-                <div class="col--1-of-3 c2">
-                    <div class="u-center-text " style="margin-bottom: -2rem; font-size: 30px ;font-weight: 200;">
-                        <h3 class="heading-secondary" style=" font-size: 20px ;font-weight: 300;color:antiquewhite;margin-bottom: 20px;">
-                            Suivez-nous sur 
-                        </h3>
-                    <div>
-                    <a href="#" class="icon-button twitter"><i class="fa fa-twitter "></i><span></span></a>
-                    <a href="#" class="icon-button facebook"><i class="fa fa-facebook  "></i><span></span></a>
-                    <a href="#" class="icon-button instagram"><i class="fa fa-instagram "></i><span></span></a>
-                    <a href="#" class="icon-button youtube"><i class="fa fa-youtube"></i><span></span></a>
-                </div>   
-            </div>    
+
+                <div class="form__group u-margin-bottom-medium">
+                    <div style="display: inline-block; margin-right: 2%; margin-bottom: 10px; margin-left: 2rem;">
+                        Hypertension :
+                     </div>
                     
 
-                </div>
-                
-
-                <div class="col--1-of-3 c3">
-                    <div class="u-center-text " style="margin-bottom: -2rem; font-size: 30px ;font-weight: 200;">
-                        <h3 class="heading-secondary" style=" font-size: 20px ;font-weight: 300;color:antiquewhite;margin-bottom: 20px;">
-                            Contact
-                        </h3>
-                        <div class="short_contact_list">
-                            
-                               <div><a href="#" > <i class="fa fa-phone"></i> +33 663105549 </a></div> 
-                                <a href="#"> <i class="fa fa-envelope"></i>nesrine@gmail.com</a>
-                        </div>
+                    <div class="form__radio-group">
+                        <input required="required" type="radio" class="form__radio-input" id="Hb" name="hypertension" value="1" />
+                        <label for="Hb" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Oui
+                        </label>
                     </div>
-                </div>
+
+                    <div class="form__radio-group">
+                        <input required="required" type="radio" class="form__radio-input" id="Ha" name="hypertension" value="0" />
+                        <label for="Ha" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Non
+                        </label>
+                    </div>
+                 </div>
+
+
+                 
+                 <div class="form__group u-margin-bottom-medium">
+                    <div style="display: inline-block; margin-right: 2%; margin-bottom: 10px; margin-left: 2rem;">
+                        Maladie cardiaque :
+                     </div>
+                    
+
+                    <div class="form__radio-group">
+                        <input required="required" type="radio" class="form__radio-input" id="Ma" name="maladie" value="1" />
+                        <label for="Ma" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Oui
+                        </label>
+                    </div>
+
+                    <div class="form__radio-group">
+                        <input required="required" type="radio" class="form__radio-input" id="Mb" name="maladie" value="0" />
+                        <label for="Mb" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Non
+                        </label>
+                    </div>
+                 </div>
+
+
+
+
+                 <div class="form__group u-margin-bottom-medium">
+                    <div style="display: inline-block; margin-right: 2%; margin-bottom: 10px; margin-left: 2rem;">
+                        Marié :
+                     </div>
+                    
+
+                    <div class="form__radio-group">
+                        <input required="required" type="radio" class="form__radio-input" id="Ra" name="marie" value="1" />
+                        <label for="Ra" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Oui
+                        </label>
+                    </div>
+
+                    <div class="form__radio-group">
+                        <input required="required" type="radio" class="form__radio-input" id="Rb" name="marie" value="0" />
+                        <label for="Rb" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Non
+                        </label>
+                    </div>
+                 </div>
+
+                 <div class="col-sm-12">
+                    <div class="input-block">
+                      <label for="">Type de travail</label>
+                      <select required="required" name="travail" class="form-control">
+                        <option value="0">Secteur Privé</option>
+                        <option value="1">Secteur public</option>
+                        <option value="2">Auto-entrepreneur </option>
+                        <option value="3">Enfant</option>
+                        <option value="4">Jamais travaillé </option>
+                        
+                    </select>
+                    </div>
+                  </div>
+
+                 <div class="form__group u-margin-bottom-medium">
+                    <div style="display: inline-block; margin-right: 2%; margin-bottom: 10px; margin-left: 2rem;">
+                        Zone résidentielle  :
+                     </div>
+                    
+
+                    <div class="form__radio-group">
+                        <input required="required" type="radio" class="form__radio-input" id="Za" name="zone" value="0" />
+                        <label for="Za" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Urbain
+                        </label>
+                    </div>
+
+                    <div class="form__radio-group">
+                        <input required="required" type="radio" class="form__radio-input" id="Zb" name="zone" value="1" />
+                        <label for="Zb" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Rurale
+                        </label>
+                    </div>
+                 </div>
+
+
+
+        
+        <div class="col-sm-12">
+            <div class="input-block">
+              <label for="">Glycémie</label>
+              <input required="required" type="number" name="glycemie" class="form-control">
             </div>
-        </footer>
+          </div>
+          
+        
+
+          <div class="col-sm-12">
+            <div class="input-block">
+              <label for="">IMC</label>
+              <input required="required" type="number" name="imc" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="input-block" required="required">
+              <label for="">Tabac</label>
+              <select required="required"  name="tabac" class="form-control">
+                <option value="0">Jamais fumé</option>
+                <option value="1">Ancien fumeur</option>
+                <option value="2">Fumeur</option>
+                <option value="3">inconnu ou ne souhaite pas répondre</option>
+                
+            </select>
+            </div>
+          </div>
+          
+          
+		 <div class="col-md-12">
+    <div class="g-recaptcha" data-sitekey="6LelrwAVAAAAAMKd-jsIvtpFJNkVD0jJF6BhQEJP"></div>
+		 <br>
+		 </div>
+		 
+ 
+          <div style="text-align:center;">
+            <input  required="required"
+                class="btn btn--white btn--animated"
+                type="submit"
+                name="send"
+                id="send"
+                value="Envoyer"
+            />
+        </div>
+
+        </form>
+    </div>
+</section>
+
+    <footer class="footer">
+      <div
+        class="u-center-text"
+        style="margin-bottom: -1rem; font-size: 30px; font-weight: 200"
+      >
+        <h3
+          class="heading-secondary"
+          style="font-size: 20px; font-weight: 300; color: antiquewhite"
+        >
+          souscrire à notre NewsLetters
+        </h3>
+      </div>
+      <div style="text-align: center; max-width: 60%; margin-left: 20%">
+        <form
+          id="form1"
+          enctype="multipart/form-data"
+          method="post"
+          action=""
+          class="form"
+        >
+          <div class="form__group" style="position: relative">
+            <input 
+              type="email"
+              class="form__input"
+              style="width: 100%"
+              placeholder="Email address"
+              id="email"
+              name="email"
+              required
+            />
+            <label for="email" class="form__label" style="color: antiquewhite"
+              >Votre adresse mail</label
+            >
+            <input
+              style="
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-top: 2%;
+                color: transparent;
+                background-color: transparent;
+                z-index: 800;
+                cursor: pointer;
+                border-color: transparent;
+              "
+              type="submit"
+              name="newsletter"
+              id="newsletter"
+              value="Envoyer"
+            />
+            <img
+              style="position: absolute; top: 0; right: 0; margin-top: 2%"
+              src="https://img.icons8.com/color/48/000000/send-mass-email.png"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col--1-of-3 c1">
+          <div class="u-center-text" style="font-size: 30px; font-weight: 200">
+            <h3
+              class="heading-secondary"
+              style="
+                font-size: 20px;
+                font-weight: 300;
+                color: antiquewhite;
+                margin-bottom: 20px;
+              "
+            >
+              Plus
+            </h3>
+            <p>ADM Copyright &copy; ++++ logo</p>
+          </div>
+        </div>
+
+        <div class="col--1-of-3 c2">
+          <div
+            class="u-center-text"
+            style="margin-bottom: -2rem; font-size: 30px; font-weight: 200"
+          >
+            <h3
+              class="heading-secondary"
+              style="
+                font-size: 20px;
+                font-weight: 300;
+                color: antiquewhite;
+                margin-bottom: 20px;
+              "
+            >
+              Suivez-nous sur
+            </h3>
+            <div>
+              <a href="#" class="icon-button twitter"
+                ><i class="fa fa-twitter"></i><span></span
+              ></a>
+              <a href="#" class="icon-button facebook"
+                ><i class="fa fa-facebook"></i><span></span
+              ></a>
+              <a href="#" class="icon-button instagram"
+                ><i class="fa fa-instagram"></i><span></span
+              ></a>
+              <a href="#" class="icon-button youtube"
+                ><i class="fa fa-youtube"></i><span></span
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col--1-of-3 c3">
+          <div
+            class="u-center-text"
+            style="margin-bottom: -2rem; font-size: 30px; font-weight: 200"
+          >
+            <h3
+              class="heading-secondary"
+              style="
+                font-size: 20px;
+                font-weight: 300;
+                color: antiquewhite;
+                margin-bottom: 20px;
+              "
+            >
+              Contact
+            </h3>
+            <div class="short_contact_list">
+              <div>
+                <a href="#"> <i class="fa fa-phone"></i> +33 663105549 </a>
+              </div>
+              <a href="#"> <i class="fa fa-envelope"></i>nesrine@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
 
     <!-- JS here -->
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
+    <script src=" {% static 'app1/js/vendors/modernizr-3.5.0.min.js' %}"></script>
+    <script src=" {% static 'app1/js/vendors/jquery-1.12.4.min.js' %}"></script>
+    <script src=" {% static 'app1/js/vendors/waypoints.min.js' %}"></script>
+    <script src=" {% static 'app1/js/vendors/nice-select.min.js' %}"></script>
+    <script src=" {% static 'app1/js/vendors/jquery.slicknav.min.js' %}"></script>
 
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-   
-    <script src="js/waypoints.min.js"></script>
-
-    <script src="js/jquery.slicknav.min.js"></script>
- 
-    <script src="js/main.js"></script>
-    <script src="js/mainVolunteer.js"></script>
-</body>
-
+    <script src=" {% static 'app1/js/main.js' %}"></script>
+            <script src=" {% static 'app1/js/mainVolunteer.js' %}"></script>
+    
+  </body>
 </html>
