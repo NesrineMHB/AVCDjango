@@ -24,8 +24,6 @@ def index(request):
 
 
 def tester(request):
-    if request.method == 'GET':
-        return render(request,"volunteer.html")
     
     if request.method == 'POST':
             #----- form -----#
@@ -41,7 +39,7 @@ def tester(request):
         tabac = request.POST['tabac']
 
 
-        ecaptcha_response = request.POST.get('g-recaptcha-response')
+        recaptcha_response = request.POST.get('g-recaptcha-response')
         url = 'https://www.google.com/recaptcha/api/siteverify'
         values = {
            'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
@@ -52,6 +50,9 @@ def tester(request):
         response = urllib.request.urlopen(req)
         result = json.loads(response.read().decode())
 
+        if int(age) <0 :
+            messages.error(request, 'Invalid age. Please try again.')
+            
         if result['success']:
            print("yes")
            messages.success(request, 'New comment added with success!')
@@ -60,6 +61,9 @@ def tester(request):
            messages.error(request, 'Invalid reCAPTCHA. Please try again.')
            
         return render(request,"volunteer.html")
+    if request.method == 'GET':
+        return render(request,"volunteer.html")
+    
     else:
         
         return render(request,"volunteer.html")

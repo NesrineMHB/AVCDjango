@@ -147,6 +147,17 @@
     </div>
 
     
+{% if messages %}
+<ul class="messages"  style=" padding: 5px 10px;">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 
    
     <section class=" section-volunteer">
@@ -159,14 +170,14 @@
         </div>
 
         <div class="contact-wrap">
-            <form action="" class="contact-form">
-                
+            <form name="form" action="" method="POST" class="contact-form">
+                {% csrf_token %}
                 <div class="form__group u-margin-bottom-medium">
                     <div style="display: inline-block; margin-right: 2%; margin-bottom: 10px; margin-left: 2rem;">
                         Genre :
                      </div>
                     <div class="form__radio-group">
-                        <input required="required" type="radio" class="form__radio-input" id="smal" name="genre" value="0" />
+                        <input required="required" type="radio" class="form__radio-input" id="small" name="genre" value="0" />
                         <label for="small" class="form__radio-label">
                             <span class="form__radio-button"></span>
                             Femme
@@ -191,12 +202,12 @@
                  </div>
 
 
-                 <div class="col-sm-12">
-                    <div class="input-block">
-                       <label for="">Age</label>
-                       <input type="text" name="age" required="required" class="form-control">
-                    </div>
-                </div>
+                <div class="col-sm-12">
+            	<div class="input-block">
+		              <label for="">Age</label>
+		              <input required="required" type="number" name="age" class="form-control">
+		            </div>
+		          </div>
 
                 <div class="form__group u-margin-bottom-medium">
                     <div style="display: inline-block; margin-right: 2%; margin-bottom: 10px; margin-left: 2rem;">
@@ -343,7 +354,7 @@
           
           
 		 <div class="col-md-12">
-    <div class="g-recaptcha" data-sitekey="6LelrwAVAAAAAMKd-jsIvtpFJNkVD0jJF6BhQEJP"></div>
+    <div  class="g-recaptcha" data-sitekey="6LelrwAVAAAAAMKd-jsIvtpFJNkVD0jJF6BhQEJP"></div>
 		 <br>
 		 </div>
 		 
@@ -500,6 +511,18 @@
 
 
     <!-- JS here -->
+    
+    <script>
+window.onload = function() {
+  var recaptcha = document.forms["form"]["g-recaptcha-response"];
+  recaptcha.required = true;
+  recaptcha.oninvalid = function(e) {
+    // do something
+    alert("Please complete the captcha");
+  }
+}
+</script>
+
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>

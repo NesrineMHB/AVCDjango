@@ -51,6 +51,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+SESSION_COOKIE_SECURE = True
 ROOT_URLCONF = "AVCProject.urls"
 
 TEMPLATES = [
