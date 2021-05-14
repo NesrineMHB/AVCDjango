@@ -148,6 +148,8 @@
 
     
 {% if messages %}
+
+
 <ul class="messages"  style=" padding: 5px 10px;">
     {% for message in messages %}
     <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
@@ -159,8 +161,29 @@
 {% endif %}
 
 
+{% if res %}
+
+<button id="btnPopup" class="btn btn--white btn--animated">Plus de details >></button>
+<div id="overlay" class="overlay">
+<div id="popup" class="popup">
+<h2>
+Resultat
+<span id="btnClose" class="btnClose">&times;</span>
+</h2>
+<div>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a nulla 
+a massa interdum imperdiet sed nec nibh. Proin porttitor euismod nulla ut 
+interdum. Cras elementum placerat aliquam.
+</div>
+</div>
+</div>
+
+{% endif %}
+
+
+
    
-    <section class=" section-volunteer">
+    <section class=" section-volunteer" id="#tester">
         <div class="u-center-text ">
             <p class="feature-box__text">
             ajouter des * et dire que tous les champs sont obligatoires
@@ -369,9 +392,14 @@
             />
         </div>
 
+       
+
         </form>
     </div>
 </section>
+
+
+
 
     <footer class="footer">
       <div
@@ -535,6 +563,24 @@ window.onload = function() {
 
     <script src=" {% static 'app1/js/main.js' %}"></script>
             <script src=" {% static 'app1/js/mainVolunteer.js' %}"></script>
+
+            <script>
+              var btnPopup = document.getElementById('btnPopup');
+              var overlay = document.getElementById('overlay');
+              btnPopup.addEventListener('click',openMoadl);
+              function openMoadl() {
+              overlay.style.display='block';
+
+
+              }
+
+              var btnClose = document.getElementById('btnClose');
+              btnClose.addEventListener('click',closeModal);
+              function closeModal() {
+              overlay.style.display='none';
+              }            
+              
+              </script>
     
   </body>
 </html>

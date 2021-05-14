@@ -1589,3 +1589,101 @@ p {
     
     
     
+
+      /***********popoup
+
+
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  display: none;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 10% auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  height: 40%;
+  position: relative;
+  transition: all 5s ease-in-out;
+   
+    background-size: cover;
+    background-position: center;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(88, 86, 86);
+}
+.popup .close:hover {
+  color: rgb(21, 15, 77);
+}
+.popup .content {
+  max-height: 80%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+ 
+  .popup{
+    width: 70%;
+  }
+}
+
+*/
+
+.overlay {
+  position: fixed;
+  left: 0px;
+  top:0px;
+  background-color: rgba(0,0 ,0 , 0.5);
+  width: 100%;
+  height: 100%;
+  z-index:1;
+  display:none;
+  }
+
+
+  .btnClose {
+    float: right;
+    font-size:16pt;
+    cursor: pointer;
+    color: rgb(26, 26, 26);
+    }
+
+
+  .popup{
+    margin: 10% auto;
+    width : 70%;
+    background-color: rgb(158, 169, 235);
+    padding: 1em;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    }
+
+

@@ -52,15 +52,17 @@ def tester(request):
 
         if int(age) <0 :
             messages.error(request, 'Invalid age. Please try again.')
-            
+            return render(request,"volunteer.html")
+        res = True
         if result['success']:
            print("yes")
            messages.success(request, 'New comment added with success!')
+           return render(request,"volunteer.html",{'res': res })
         else:
            print("no")
            messages.error(request, 'Invalid reCAPTCHA. Please try again.')
            
-        return render(request,"volunteer.html")
+        return render(request,"volunteer.html",{'res': False })
     if request.method == 'GET':
         return render(request,"volunteer.html")
     
