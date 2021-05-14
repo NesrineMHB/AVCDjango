@@ -1,0 +1,52 @@
+.footer {
+    
+    background-image: 
+    radial-gradient(rgba(16, 30, 150, 0.8),#0d1664);
+
+        padding: 5rem 0;
+    font-size: 1rem;
+    color: white;
+
+    @include respond(tab-port) {
+        padding: 2rem 0;
+    }
+
+
+   
+
+    .short_contact_list{
+        a{
+            font-size: 80%;
+            color: #0a063b;
+            &:hover{
+                color: white;
+            }
+        }
+
+    }
+
+    p{
+        color: #0a063b;
+        font-size: 80%;
+    }
+.c1,
+.c2,
+.c3 {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  
+   }
+
+   .c1{
+    animation-delay: 0s;
+   }
+
+   .c2{
+    animation-delay: 1s;
+   }
+   .c3{
+    animation-delay: 0s;
+   }
+    
+}

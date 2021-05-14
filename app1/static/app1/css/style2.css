@@ -1436,11 +1436,13 @@ p {
 
 .t2 p::before {
   content: "";
-  animation: anp 10s ease-out infinite both; }
+  animation: anp 10s ease-out infinite both; 
+  color: #0a063b}
 
 .t2 h3::before {
   content: "";
-  animation: anh3 10s ease-out infinite both; }
+  animation: anh3 10s ease-out infinite both; 
+  color: red;}
 
 .slider_area .single_slider {
   height: 742px;
@@ -1498,44 +1500,36 @@ p {
 @keyframes fondu {
   0%
     {
-      background-image: url("../img/AVC2.jpeg");  }
+      background-image: url("../img/head.jpeg");  }
   33%
     {
-      background-image:  url("../img/AVC1.jpg");}
+      background-image:  url("../img/inertie.jpeg");}
   66% {
-    background-image: url("../img/AVC3.jpeg"); }
+    background-image: url("../img/parole.jpeg"); }
   100% {
-    background-image: url("../img/AVC2.jpeg"); } }
+    background-image: url("../img/15.png"); } }
 
-@keyframes anspan {
-  0% {
-    content: "Qui somme nous ?"; }
-  33% {
-    content: "commencer l'aventure avec ADM"; }
-  66% {
-    content: "autre texte"; }
-  100% {
-    content: "autre"; } }
+
 
 @keyframes anp {
   0% {
-    content: "Comment vivre avec sa maladie et l'accepter"; }
+    content: "Paralysé"; }
   33% {
-    content: "adm : guerier et gueriere"; }
+    content: "d'un membre"; }
   66% {
-    content: "autre chose"; }
+    content: "de la parole"; }
   100% {
-    content: "autre chose"; } }
+    content: "appelez 15"; } }
 
 @keyframes anh3 {
   0% {
-    content: "details"; }
-  50% {
-    content: "details 2"; }
-  75% {
-    content: "details 3"; }
+    content: "Visage"; }
+  33% {
+    content: "Inertie"; }
+  66% {
+    content: "Trouble"; }
   100% {
-    content: "details 4"; } }
+    content: "En urgence"; } }
 
 
 .slider_area_volunteer .single_slider_volunteer{
@@ -1590,72 +1584,9 @@ p {
     
     
 
-      /***********popoup
+      /***********popoup*/
 
 
-
-
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  display: none;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 10% auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 40%;
-  height: 40%;
-  position: relative;
-  transition: all 5s ease-in-out;
-   
-    background-size: cover;
-    background-position: center;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: rgb(88, 86, 86);
-}
-.popup .close:hover {
-  color: rgb(21, 15, 77);
-}
-.popup .content {
-  max-height: 80%;
-  overflow: auto;
-}
-
-@media screen and (max-width: 700px){
- 
-  .popup{
-    width: 70%;
-  }
-}
-
-*/
 
 .overlay {
   position: fixed;

@@ -3,8 +3,9 @@
 <html class="no-js" lang="fr">
   <head>
     <meta charset="utf-8" />
-
-    <title>ADM</title>
+    <link rel="icon" type="image/png"  href="{% static 'app1/img/gouv.png' %}"
+    />
+    <title>Gouvernement Français</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -45,6 +46,18 @@
   </head>
 
   <body>
+    {% if subscribe %}
+
+
+<ul class="messages"  style=" padding: 5px 10px;">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
     <header id="debut">
       <div class="header-area">
         <div class="header-top_area">
@@ -60,7 +73,7 @@
                     >
                     <li
                       ><a href="#">
-                        <i class="fa fa-envelope"></i>nesrine@gmail.com</a
+                        <i class="fa fa-envelope"></i>AVC_prevension@gouv.fr</a
                       ></li
                     >
                   </ul>
@@ -93,7 +106,7 @@
             <div class="row align-items-center">
               <div class="col-xl-3 col-lg-3">
                 <div style="height: 50%" class="logo">
-                  <a href="index.html">
+                  <a href="/app1/accueil">
                     <img src="{% static 'app1/img/gouv.png' %}" alt="" />
                   </a>
                 </div>
@@ -102,23 +115,23 @@
                 <div class="main-menu">
                   <nav>
                     <ul id="navigation">
-                      <li><a href="index.html">Accueil</a></li>
+                      <li><a href="/app1/accueil">Accueil</a></li>
                       <li
                         ><a href="#about"
                           >A decouvrir <i class="ti-angle-down"></i
                         ></a>
                         <ul class="submenu">
                           <li><a href="#about">A propos</a></li>
-                          <li><a href="#missions">Le dignostique?</a></li>
+                          <li><a href="#missions">AVC ?</a></li>
                         </ul>
                       </li>
 
-                      <li><a href="#contact">Contact</a></li>
+                      <li><a href="#footer">Contact</a></li>
                     </ul>
                   </nav>
                   <div class="Appointment">
                     <div class="book_btn d-none d-lg-block">
-                      <a data-scroll-nav="1" href="volenteer.html"
+                      <a data-scroll-nav="1" href="/app1/tester"
                         >se faire tester</a
                       >
                     </div>
@@ -144,8 +157,8 @@
                 <span></span>
                 <h3></h3>
                 <p></p>
-                <a href="#section-tours" class="btn btn--white btn--animated"
-                  >Nous rejoindre</a
+                <a href="/app1/tester" class="btn btn--white btn--animated"
+                  >Faire le test</a
                 >
               </div>
             </div>
@@ -159,7 +172,7 @@
     <section class="section-features">
       <div class="u-center-text">
         <h3 class="heading-secondary">
-          SE faire tester n'a jamais était aussi facile
+          Se faire tester n'a jamais était aussi facile
         </h3>
       </div>
       <div class="row js--wp-3">
@@ -174,7 +187,7 @@
               Afin de connaître votre taux de glycémie, nous générons votre ordonnance
               pour une analyse de sang afin que tout soit gratuit!
             </p>
-            <a href="#popup1" class="btn-text">2.Remplir le formulaire&rarr;</a>
+            <a href="{% static 'app1/ordonnance(1).pdf' %}" class="btn-text">Télecharger l'ordonnance&rarr;</a>
           </div>
         </div>
 
@@ -186,9 +199,8 @@
             />
             <h3 class="u-margin-bottom-small">2.Remplir le formulaire</h3>
             <p class="feature-box__text">
-              Remplissez notre formulaire avec les informations les plus exactes possibles.
+              Remplissez notre formulaire avec les informations les plus exactes possibles.<br><br>
             </p>
-            <a href="#contact" class="btn-text">Nous contacter&rarr;</a>
           </div>
         </div>
 
@@ -203,7 +215,6 @@
               Nous vous dirons si vous présentez un risque important d'AVC, et pourront éventuellement vous
               rediriger vers des spécialistes.
             </p>
-            <a href="#popup3" class="btn-text">Adherer &rarr;</a>
           </div>
         </div>
       </div>
@@ -211,7 +222,7 @@
 
     <section class="about" id="about">
       <div class="glisse">
-        <h3 class="heading-secondary">Au delà de la maladie?</h3>
+        <h3 class="heading-secondary">Notre plateforme?</h3>
       </div>
 
       <div class="glisse2">
@@ -250,18 +261,18 @@
             />
 
             <img
-              srcset="{% static 'app1/img/symp2.jpg' %}" 300w, "{% static 'app1/img/symp2.jpg' %}" 1000w'
+              srcset="{% static 'app1/img/AVC4.jpeg' %}" 300w, "{% static 'app1/img/AVC4.jpeg' %}" 1000w'
               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
               alt="Photo 3"
               class="composition__photo composition__photo--p3"
-              src="{% static 'app1/img/symp3.jpg' %}"
+              src="{% static 'app1/img/AVC4.jpeg' %}"
             />
           </div>
         </div>
         <div class="col--1-of-2">
           <span
             ><h3 class="heading-tertiary" onclick="maFonction('m1')">
-              Qu'est ce qu'un AVC?
+              Qu'est ce qu'un AVC? 	&#8628;
               <i
                 class="ti-angle-down"
                 style="right: 5px; position: absolute"
@@ -276,7 +287,7 @@
 
           <span
             ><h3 class="heading-tertiary" onclick="maFonction('m2')">
-              Les symptômes
+              Les symptômes 	&#8628;
               <i
                 class="ti-angle-down"
                 style="right: 5px; position: absolute"
@@ -291,7 +302,7 @@
 
           <span
             ><h3 class="heading-tertiary" onclick="maFonction('maDIV1')">
-              Comment réagir?
+              Comment réagir? 	&#8628;
               <i
                 class="ti-angle-down"
                 style="right: 5px; position: absolute"
@@ -307,7 +318,7 @@
     </section>
 
    
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div
         class="u-center-text"
         style="margin-bottom: -1rem; font-size: 30px; font-weight: 200"
@@ -323,10 +334,12 @@
         <form
           id="form1"
           enctype="multipart/form-data"
-          method="post"
-          action="connection.php"
+          method="POST"
+          action=""
           class="form"
         >
+
+        {% csrf_token %}
           <div class="form__group" style="position: relative">
             <input
               type="email"
@@ -353,9 +366,9 @@
                 border-color: transparent;
               "
               type="submit"
-              name="newsletter"
+              name="send"
               id="newsletter"
-              value="Envoyer"
+              value="newsletter"
             />
             <img
               style="position: absolute; top: 0; right: 0; margin-top: 2%"
@@ -378,7 +391,7 @@
             >
               Plus
             </h3>
-            <p>ADM Copyright &copy; ++++ logo</p>
+            <p>AVC Copyright &copy; ++++ logo</p>
           </div>
         </div>
 
@@ -435,7 +448,7 @@
               <div>
                 <a href="#"> <i class="fa fa-phone"></i> +33 663105549 </a>
               </div>
-              <a href="#"> <i class="fa fa-envelope"></i>nesrine@gmail.com</a>
+              <a href="#"> <i class="fa fa-envelope"></i>AVC_prevension@gouv.fr</a>
             </div>
           </div>
         </div>

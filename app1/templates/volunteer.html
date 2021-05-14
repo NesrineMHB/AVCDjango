@@ -3,8 +3,9 @@
 <html class="no-js" lang="fr">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" type="image/png"  href="{% static 'app1/img/gouv.png' %}"/>
 
-    <title>ADM</title>
+    <title>Gouvernement Français</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -45,6 +46,23 @@
   </head>
 
   <body>
+
+        
+{% if subscribe %}
+
+
+<ul class="messages"  style=" padding: 5px 10px;">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+      <!--  {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}-->
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+
     <header id="debut">
       <div class="header-area">
         <div class="header-top_area">
@@ -60,7 +78,7 @@
                     >
                     <li
                       ><a href="#">
-                        <i class="fa fa-envelope"></i>nesrine@gmail.com</a
+                        <i class="fa fa-envelope"></i>AVC_prevension@gouv.fr</a
                       ></li
                     >
                   </ul>
@@ -93,7 +111,7 @@
             <div class="row align-items-center">
               <div class="col-xl-3 col-lg-3">
                 <div style="height: 50%" class="logo">
-                  <a href="index.html">
+                  <a href="/app1/accueil">
                     <img src="{% static 'app1/img/gouv.png' %}" alt="" />
                   </a>
                 </div>
@@ -102,23 +120,23 @@
                 <div class="main-menu">
                   <nav>
                     <ul id="navigation">
-                      <li><a href="index.html">Accueil</a></li>
+                      <li><a href="/app1/accueil">Accueil</a></li>
                       <li
                         ><a href="#about"
                           >A decouvrir <i class="ti-angle-down"></i
                         ></a>
                         <ul class="submenu">
-                          <li><a href="#about">A propos</a></li>
-                          <li><a href="#missions">Le dignostique?</a></li>
+                          <li><a href="/app1/accueil">A propos</a></li>
+                          <li><a href="/app1/accueil">AVC ?</a></li>
                         </ul>
                       </li>
 
-                      <li><a href="#contact">Contact</a></li>
+                      <li><a href="#footer">Contact</a></li>
                     </ul>
                   </nav>
                   <div class="Appointment">
                     <div class="book_btn d-none d-lg-block">
-                      <a data-scroll-nav="1" href="volenteer.html"
+                      <a data-scroll-nav="1" href="/app1/tester"
                         >se faire tester</a
                       >
                     </div>
@@ -136,9 +154,9 @@
     <!-- header-end -->
 
     <div class="slider_area_volunteer" >
-        <div class="single_slider_volunteer  d-flex align-items-center slider_bg_1 overlay2 ">
-            <div class="u-center-text ">
-                <h3 class="heading-secondary" style="margin-bottom: -2rem;" >
+        <div class="single_slider_volunteer  d-flex align-items-center slider_bg_1 u-center-text" >
+          <div style="margin-left: 5% ;">
+            <h3 class="heading-secondary" >
                    SE faire tester n'a jamais été aussi facile</h3>
                
            </div>
@@ -147,13 +165,13 @@
     </div>
 
     
-{% if messages %}
+{% if msg %}
 
 
 <ul class="messages"  style=" padding: 5px 10px;">
     {% for message in messages %}
     <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
-        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        <!--{% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}-->
         {{ message }}
     </li>
     {% endfor %}
@@ -171,9 +189,7 @@ Resultat
 <span id="btnClose" class="btnClose">&times;</span>
 </h2>
 <div>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a nulla 
-a massa interdum imperdiet sed nec nibh. Proin porttitor euismod nulla ut 
-interdum. Cras elementum placerat aliquam.
+le risque que vous ayez un AVC est de ... nous vous invitons à prendre rendez vous avec un medecin specialisé sur : <a href="https://www.doctolib.fr/" style= " color: red;">Doctolib</a>
 </div>
 </div>
 </div>
@@ -388,7 +404,7 @@ interdum. Cras elementum placerat aliquam.
                 type="submit"
                 name="send"
                 id="send"
-                value="Envoyer"
+                value="Validé"
             />
         </div>
 
@@ -401,7 +417,7 @@ interdum. Cras elementum placerat aliquam.
 
 
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div
         class="u-center-text"
         style="margin-bottom: -1rem; font-size: 30px; font-weight: 200"
@@ -421,6 +437,7 @@ interdum. Cras elementum placerat aliquam.
           action=""
           class="form"
         >
+        {% csrf_token %}
           <div class="form__group" style="position: relative">
             <input 
               type="email"
@@ -447,9 +464,9 @@ interdum. Cras elementum placerat aliquam.
                 border-color: transparent;
               "
               type="submit"
-              name="newsletter"
+              name="send"
               id="newsletter"
-              value="Envoyer"
+              value="newsletter"
             />
             <img
               style="position: absolute; top: 0; right: 0; margin-top: 2%"
@@ -472,7 +489,7 @@ interdum. Cras elementum placerat aliquam.
             >
               Plus
             </h3>
-            <p>ADM Copyright &copy; ++++ logo</p>
+            <p>AVC Copyright &copy; ++++ logo</p>
           </div>
         </div>
 
@@ -529,7 +546,7 @@ interdum. Cras elementum placerat aliquam.
               <div>
                 <a href="#"> <i class="fa fa-phone"></i> +33 663105549 </a>
               </div>
-              <a href="#"> <i class="fa fa-envelope"></i>nesrine@gmail.com</a>
+              <a href="#"> <i class="fa fa-envelope"></i>AVC_prevension@gouv.fr</a>
             </div>
           </div>
         </div>
