@@ -68,12 +68,12 @@
                   <ul>
                     <li
                       ><a href="#">
-                        <i class="fa fa-phone"></i> +33 663105549
+                        <i class="fa fa-phone"></i> +33 6 63 10 55 49
                       </a></li
                     >
                     <li
                       ><a href="#">
-                        <i class="fa fa-envelope"></i>AVC_prevension@gouv.fr</a
+                        <i class="fa fa-envelope"></i>AVC_prevention@gouv.fr</a
                       ></li
                     >
                   </ul>
@@ -118,11 +118,11 @@
                       <li><a href="/accueil">Accueil</a></li>
                       <li
                         ><a href="#about"
-                          >A decouvrir <i class="ti-angle-down"></i
-                        ></a>
+                          >En savoir plus sur les AVC
+                        </a>
                         <ul class="submenu">
-                          <li><a href="#about">A propos</a></li>
-                          <li><a href="#missions">AVC ?</a></li>
+                          <li><a href="/accueil">Quel risque ?</a></li>
+                          <li><a href="/accueil">Qu'est ce qu'un AVC ?</a></li>
                         </ul>
                       </li>
 
@@ -132,7 +132,7 @@
                   <div class="Appointment">
                     <div class="book_btn d-none d-lg-block">
                       <a data-scroll-nav="1" href="/tester"
-                        >se faire tester</a
+                        > Se faire tester </a
                       >
                     </div>
                   </div>
@@ -172,7 +172,7 @@
     <section class="section-features">
       <div class="u-center-text">
         <h3 class="heading-secondary">
-          Se faire tester n'a jamais était aussi facile
+          Se faire tester n'a jamais été aussi simple
         </h3>
       </div>
       <div class="row js--wp-3">
@@ -182,12 +182,11 @@
               src="{% static 'app1/img/icone/bilan-de-sante.png' %}"
               style="width: 25%; height: 20%"
             />
-            <h3 class="u-margin-bottom-small">1.Prise de Sang</h3>
+            <h3 class="u-margin-bottom-small">1. Prise de Sang</h3>
             <p class="feature-box__text">
-              Afin de connaître votre taux de glycémie, nous générons votre ordonnance
-              pour une analyse de sang afin que tout soit gratuit!
+              Téléchargez votre ordonnance pour un dosage glycémique pris en charge.
             </p>
-            <a href="{% static 'app1/ordonnance(1).pdf' %}" class="btn-text">Télecharger l'ordonnance&rarr;</a>
+            <a href="{% static 'app1/ordonnance(1).pdf' %}" class="btn-text">Télecharger l'ordonnance &rarr;</a>
           </div>
         </div>
 
@@ -197,9 +196,9 @@
               src="{% static 'app1/img/icone/consent.png' %}"
               style="width: 25%; height: 20%"
             />
-            <h3 class="u-margin-bottom-small">2.Remplir le formulaire</h3>
+            <h3 class="u-margin-bottom-small">2. Remplir le formulaire</h3>
             <p class="feature-box__text">
-              Remplissez notre formulaire avec les informations les plus exactes possibles.<br><br>
+              Remplissez le formulaire de dépistage d'AVC.<br><br>
             </p>
           </div>
         </div>
@@ -210,10 +209,10 @@
               src="{% static 'app1/img/icone/research.png' %}"
               style="width: 25%; height: 20%"
             />
-            <h3 class="u-margin-bottom-small">3.Le resultat</h3>
+            <h3 class="u-margin-bottom-small">3. Le resultat</h3>
             <p class="feature-box__text">
-              Nous vous dirons si vous présentez un risque important d'AVC, et pourront éventuellement vous
-              rediriger vers des spécialistes.
+              Vous connaitrez instantanément vos risques d'avoir un AVC, et pourrez être
+              redirigés vers des spécialistes si nécessaire.
             </p>
           </div>
         </div>
@@ -222,12 +221,18 @@
 
     <section class="about" id="about">
       <div class="glisse">
-        <h3 class="heading-secondary">Notre plateforme?</h3>
+        <h3 class="heading-secondary">Un risque à ne pas prendre à la légère</h3>
       </div>
 
       <div class="glisse2">
         <p>
-          Il faut profiter de la vie :)
+          Chaque année en France, 150 000 personnes sont victimes d'AVC et 30 000 personnes n'y survivent pas (20%). Les
+          personnes survivant à un accident vasculaire cérébral ont pour la plupart de grosses séquelles qui necessiteront des
+          mois de combats en rééducation. On estime aujourd'hui à un demi million de personnes vivants avec des séquelles
+          handicapantes.
+
+          L'AVC est une course contre la montre : plus la prise en charge sera rapide et plus les séquelles seront limitées. Au
+          moindre doute composez le 15.
         </p>
       </div>
     </section>
@@ -280,7 +285,7 @@
           ></span>
           <div id="m1" style="display: none">
             <p>
-              Un AVC (Accident Vasculaire Cérébral), aussi connu sous le nom "d'attaque" est lorsque
+              Un AVC (Accident Vasculaire Cérébral), aussi connu sous le nom "d'attaque" survient lorsque
               la circulation sanguine vers le cerveau est empêchée par un vaisseau sanguin bouché.
             </p>
           </div>
@@ -295,7 +300,7 @@
           ></span>
           <div id="m2" style="display: none">
             <p>
-              Il peut y avoir plusieurs symptomes différents selon la zone du cerveau touchée. Déformation de la bouche,
+              Il peut y avoir des symptomes différents selon la zone du cerveau touchée : déformation d'un côté du visage,
               faiblesse d'un côté du corps, troubles de la parole.
             </p>
           </div>
@@ -310,14 +315,14 @@
           ></span>
           <div id="maDIV1" style="display: none">
             <p>
-              Il faut agir vite. Il faut immédiatement appeler le 15.
+              Appelez immédiatement le 15.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-   
+
     <footer id="footer" class="footer">
       <div
         class="u-center-text"
@@ -327,7 +332,7 @@
           class="heading-secondary"
           style="font-size: 20px; font-weight: 300; color: antiquewhite"
         >
-          souscrire à notre NewsLetters
+          Souscrire à notre Newsletter
         </h3>
       </div>
       <div style="text-align: center; max-width: 60%; margin-left: 20%">
@@ -446,9 +451,9 @@
             </h3>
             <div class="short_contact_list">
               <div>
-                <a href="#"> <i class="fa fa-phone"></i> +33 663105549 </a>
+                <a href="#"> <i class="fa fa-phone"></i> +33 6 63 10 55 49 </a>
               </div>
-              <a href="#"> <i class="fa fa-envelope"></i>AVC_prevension@gouv.fr</a>
+              <a href="#"> <i class="fa fa-envelope"></i>AVC_prevention@gouv.fr</a>
             </div>
           </div>
         </div>
