@@ -1,0 +1,17 @@
+{
+  "name": "AVCProject",
+  "version": "1.0.0",
+  "description": "UE17",
+  "main": "accueil.html",
+  "scripts": {
+    "compile:sass": "node-sass scss/style.scss css/style2.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "0.0.1",
+    "g": "^2.0.1",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {}
+}
