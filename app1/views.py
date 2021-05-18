@@ -92,15 +92,15 @@ def tester(request):
 
 
             res = True
-            if int(age) <0 :
+            if float(age) <0 :
                 res = False
                 messages.error(request, 'Invalid age. Please try again.')
 
-            if int(glycemie) <0 :
+            if float(glycemie) <0 :
                 res = False
                 messages.error(request, 'Invalid glycemie. Please try again.')
 
-            if int(imc) <0 :
+            if float(imc) <0 :
                 res = False
                 messages.error(request, 'Invalid imc. Please try again.')
                 
