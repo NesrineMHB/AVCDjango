@@ -111,7 +111,7 @@
             <div class="row align-items-center">
               <div class="col-xl-3 col-lg-3">
                 <div style="height: 50%" class="logo">
-                  <a href="/app1/accueil">
+                  <a href="/accueil">
                     <img src="{% static 'app1/img/gouv.png' %}" alt="" />
                   </a>
                 </div>
@@ -120,14 +120,14 @@
                 <div class="main-menu">
                   <nav>
                     <ul id="navigation">
-                      <li><a href="/app1/accueil">Accueil</a></li>
+                      <li><a href="/accueil">Accueil</a></li>
                       <li
                         ><a href="#about"
                           >A decouvrir <i class="ti-angle-down"></i
                         ></a>
                         <ul class="submenu">
-                          <li><a href="/app1/accueil">A propos</a></li>
-                          <li><a href="/app1/accueil">AVC ?</a></li>
+                          <li><a href="/accueil">A propos</a></li>
+                          <li><a href="/accueil">AVC ?</a></li>
                         </ul>
                       </li>
 
@@ -136,7 +136,7 @@
                   </nav>
                   <div class="Appointment">
                     <div class="book_btn d-none d-lg-block">
-                      <a data-scroll-nav="1" href="/app1/tester"
+                      <a data-scroll-nav="1" href="/tester"
                         >se faire tester</a
                       >
                     </div>
@@ -189,7 +189,7 @@ Resultat
 <span id="btnClose" class="btnClose">&times;</span>
 </h2>
 <div>
-le risque que vous ayez un AVC est de ... nous vous invitons à prendre rendez vous avec un medecin specialisé sur : <a href="https://www.doctolib.fr/" style= " color: red;">Doctolib</a>
+le risque que vous ayez un AVC est de {{ res }}% nous vous invitons à prendre rendez vous avec un medecin specialisé sur : <a href="https://www.doctolib.fr/" style= " color: red;">Doctolib</a>
 </div>
 </div>
 </div>
@@ -202,10 +202,8 @@ le risque que vous ayez un AVC est de ... nous vous invitons à prendre rendez v
     <section class=" section-volunteer" id="#tester">
         <div class="u-center-text ">
             <p class="feature-box__text">
-            ajouter des * et dire que tous les champs sont obligatoires
-                <br>Partager ses experiences Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-                ipsum
-            </p>
+
+              Veuillez remplir tous les champs ci-dessus avant de valider le formulaire </p>
         </div>
 
         <div class="contact-wrap">

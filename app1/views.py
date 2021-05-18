@@ -6,8 +6,12 @@ import urllib
  
 from django.shortcuts import render, redirect
 from django.conf import settings
+
+from AVCProject import settings as s
+
 from django.contrib import messages
- 
+
+from . import estimator as est
 
 from app1.models import Newsletters
 # Create your views here.
@@ -38,6 +42,7 @@ def index(request):
 
 
 def tester(request):
+
     
     if request.method == 'POST':
 
@@ -103,11 +108,19 @@ def tester(request):
                 
                 return render(request,"volunteer.html",{'msg':True})
             
+            else : 
+                
+                res = est.prediction(s.mlp,genre,age,hypertension,maladie,marie,travail,zone,glycemie,imc,tabac)[0][0]
             
             #=====================res = resultat de fonction de prediction 
-            messages.success(request, 'Pas de risque AVC.')
-            messages.error(request, 'Risque AVC.')
-            return render(request,"volunteer.html",{'res': res , 'msg':True})
+            print (res)
+            if res > 0.5 : 
+                messages.error(request, 'Risque AVC Existant.')
+                return render(request,"volunteer.html",{'res': res*100 //1 , 'msg':True})
+            else :
+                messages.success(request, 'Pas de risque AVC.')
+                return render(request,"volunteer.html",{'res': False  , 'msg':True})
+
         
     if request.method == 'GET':
         return render(request,"volunteer.html")

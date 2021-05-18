@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
+from app1 import estimator as est
+from sklearn.neural_network import MLPClassifier
 
 import os
 from django.contrib.messages import constants as messages
@@ -132,3 +134,11 @@ STATIC_ROOT = "static"
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = "/static/"
+
+
+path =os.path.join(BASE_DIR, "AVC_refactor_dataframe.csv")
+
+df_avc, Xtrain, Xtest, Ytrain, Ytest=est.processing(path)
+
+mlp=MLPClassifier(alpha=1e-05, learning_rate='adaptive', max_iter=2000, tol=0.001)
+mlp.fit(Xtrain, Ytrain)
