@@ -84,25 +84,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-xl-6 col-md-6 col-lg-4">
-                <div
-                  class="social_media_links d-none d-lg-block"
-                  style="margin-bottom: -2rem"
-                >
-                  <a href="#" class="icon-button twitter"
-                    ><i class="fa fa-twitter"></i><span></span
-                  ></a>
-                  <a href="#" class="icon-button facebook"
-                    ><i class="fa fa-facebook"></i><span></span
-                  ></a>
-                  <a href="#" class="icon-button instagram"
-                    ><i class="fa fa-instagram"></i><span></span
-                  ></a>
-                  <a href="#" class="icon-button youtube"
-                    ><i class="fa fa-youtube"></i><span></span
-                  ></a>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -188,7 +170,8 @@ Resultat
 <span id="btnClose" class="btnClose">&times;</span>
 </h2>
 <div>
-le risque que vous ayez un AVC est de {{ res }}% nous vous invitons à prendre rendez vous avec un medecin specialisé sur : <a href="https://www.doctolib.fr/" style= " color: red;">Doctolib</a>
+Le resultat de notre algorithme montre que vous etes risqué d'avoir un AVC 
+<br>Nous vous invitons à prendre rendez vous avec un medecin specialisé sur : <a href="https://www.doctolib.fr/" style= " color: red;">Doctolib</a>
 </div>
 </div>
 </div>
@@ -413,126 +396,100 @@ le risque que vous ayez un AVC est de {{ res }}% nous vous invitons à prendre r
 
 
 
+<footer id="footer" class="footer">
+  <div
+    class="u-center-text"
+    style="margin-bottom: -1rem; font-size: 30px; font-weight: 200"
+  >
+    <h3
+      class="heading-secondary"
+      style="font-size: 20px; font-weight: 300; color: antiquewhite"
+    >
+      Souscrire à notre Newsletter
+    </h3>
+  </div>
+  <div style="text-align: center; max-width: 60%; margin-left: 20%">
+    <form
+      id="form1"
+      enctype="multipart/form-data"
+      method="POST"
+      action=""
+      class="form"
+    >
 
-    <footer id="footer" class="footer">
+    {% csrf_token %}
+      <div class="form__group" style="position: relative">
+        <input
+          type="email"
+          class="form__input"
+          style="width: 100%"
+          placeholder="Email address"
+          id="email"
+          name="email"
+          required
+        />
+        <label for="email" class="form__label" style="color: antiquewhite"
+          >Votre adresse mail</label
+        >
+        <input
+          style="
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 2%;
+            color: transparent;
+            background-color: transparent;
+            z-index: 800;
+            cursor: pointer;
+            border-color: transparent;
+          "
+          type="submit"
+          name="send"
+          id="newsletter"
+          value="newsletter"
+        />
+        <img
+          style="position: absolute; top: 0; right: 0; margin-top: 2%"
+          src="https://img.icons8.com/color/48/000000/send-mass-email.png"
+        />
+      </div>
+    </form>
+  </div>
+  <div class="row " >
+    <div class="col--1-of-3 c1"></div>
+    
+    <div class="col--1-of-3 c2">
+    <div class=" u-center-text ">
       <div
-        class="u-center-text"
-        style="margin-bottom: -1rem; font-size: 30px; font-weight: 200"
+        class="u-center-text "
+        style="margin-bottom: -2rem; font-size: 30px; font-weight: 200"
       >
-        <h3
-          class="heading-secondary"
-          style="font-size: 20px; font-weight: 300; color: antiquewhite"
-        >
-          Souscrire à notre Newsletter
-        </h3>
+      <h3
+      class="heading-secondary"
+      style="
+        font-size: 20px;
+        font-weight: 300;
+        color: antiquewhite;
+        margin-bottom: 20px;
+      "
+    >
+      Contact
+    </h3>
+    <div class="short_contact_list">
+      <div>
+        <a href="#"> <i class="fa fa-phone"></i> +33 6 63 10 55 49 </a>
       </div>
-      <div style="text-align: center; max-width: 60%; margin-left: 20%">
-        <form
-          id="form1"
-          enctype="multipart/form-data"
-          method="post"
-          action=""
-          class="form"
-        >
-        {% csrf_token %}
-          <div class="form__group" style="position: relative">
-            <input
-              type="email"
-              class="form__input"
-              style="width: 100%"
-              placeholder="Email address"
-              id="email"
-              name="email"
-              required
-            />
-            <label for="email" class="form__label" style="color: antiquewhite"
-              >Votre adresse mail</label
-            >
-            <input
-              style="
-                position: absolute;
-                top: 0;
-                right: 0;
-                margin-top: 2%;
-                color: transparent;
-                background-color: transparent;
-                z-index: 800;
-                cursor: pointer;
-                border-color: transparent;
-              "
-              type="submit"
-              name="send"
-              id="newsletter"
-              value="newsletter"
-            />
-            <img
-              style="position: absolute; top: 0; right: 0; margin-top: 2%"
-              src="https://img.icons8.com/color/48/000000/send-mass-email.png"
-            />
-          </div>
-        </form>
-      </div>
-      <div class="row">
-        <div class="col--1-of-3 c1">
-          <div class="u-center-text" style="font-size: 30px; font-weight: 200">
-            <h3
-              class="heading-secondary"
-              style="
-                font-size: 20px;
-                font-weight: 300;
-                color: antiquewhite;
-                margin-bottom: 20px;
-              "
-            >
-
-          </div>
+      <a href="#"> <i class="fa fa-envelope"></i>AVC_prevention@gouv.fr</a>
+    </div>
         </div>
+      </div>  </div>
 
-        <div class="col--1-of-3 c2">
-          <div
-            class="u-center-text"
-            style="margin-bottom: -2rem; font-size: 30px; font-weight: 200"
-          >
-            <h3
-              class="heading-secondary"
-              style="
-                font-size: 20px;
-                font-weight: 300;
-                color: antiquewhite;
-                margin-bottom: 20px;
-              "
-            >
-              Contacts
-            </h3>
-            <div>
-              <div class="short_contact_list">
-                <div>
-                  <a href="#"> <i class="fa fa-phone"></i> +33 6 63 10 55 49 </a>
-                </div>
-                <a href="#"> <i class="fa fa-envelope"></i>AVC_prevension@gouv.fr</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col--1-of-3 c3"></div>
+    </div>
 
-        <div class="col--1-of-3 c3">
-          <div
-            class="u-center-text"
-            style="margin-bottom: -2rem; font-size: 30px; font-weight: 200"
-          >
-            <h3
-              class="heading-secondary"
-              style="
-                font-size: 20px;
-                font-weight: 300;
-                color: antiquewhite;
-                margin-bottom: 20px;
-              "
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
+    
+  </div>
+</footer>
 
 
 

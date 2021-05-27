@@ -791,35 +791,6 @@ p {
   width: 2.6rem;
   z-index: 10; }
 
-.twitter span {
-  background-color: #4099ff; }
-
-.facebook span {
-  background-color: #3B5998; }
-
-.instagram span {
-  background-color: #C13584; }
-
-.youtube span {
-  background-color: #bb0000; }
-
-.icon-button .fa-twitter {
-  color: #4099ff; }
-
-.icon-button .fa-facebook {
-  color: #3B5998; }
-
-.icon-button .fa-instagram {
-  color: #C13584; }
-
-.icon-button .fa-youtube {
-  color: #bb0000; }
-
-.icon-button:hover .fa-twitter,
-.icon-button:hover .fa-facebook,
-.icon-button:hover .fa-instagram,
-.icon-button:hover .fa-youtube {
-  color: white; }
 
 .form__group:not(:last-child) {
   margin-bottom: .7rem; }
@@ -1500,7 +1471,7 @@ p {
 @keyframes fondu {
   0%
     {
-      background-image: url("../img/head.jpeg");  }
+      background-image: url("../img/inertie.jpeg");  }
   33%
     {
       background-image:  url("../img/inertie.jpeg");}

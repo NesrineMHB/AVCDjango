@@ -110,11 +110,11 @@ def tester(request):
             
             else : 
                 
-                res = est.prediction(s.mlp,genre,age,hypertension,maladie,marie,travail,zone,glycemie,imc,tabac)[0][0]
+                res = est.prediction(s.mlp,genre,age,hypertension,maladie,marie,travail,zone,glycemie,imc,tabac)[0]
             
             #=====================res = resultat de fonction de prediction 
-            print (res)
-            if res > 0.5 : 
+            print ("eeeeeeeeee",res)
+            if res == 1 : 
                 messages.error(request, 'Risque AVC Existant.')
                 return render(request,"volunteer.html",{'res': res*100 //1 , 'msg':True})
             else :
