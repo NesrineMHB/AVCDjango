@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 from app1 import estimator as est
-from sklearn.neural_network import MLPClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import GridSearchCV
+
 
 import os
 from django.contrib.messages import constants as messages
@@ -140,5 +142,13 @@ path =os.path.join(BASE_DIR, "AVC_refactor_dataframe.csv")
 
 df_avc, Xtrain, Xtest, Ytrain, Ytest=est.processing(path)
 
-mlp=MLPClassifier(alpha=1e-05, learning_rate='adaptive', max_iter=2000, tol=0.001)
-mlp.fit(Xtrain, Ytrain)
+
+
+
+parameters = {'n_estimators':(100,250,500),
+              'criterion':('gini', 'entropy')
+             }
+
+rf= GridSearchCV(RandomForestClassifier(n_jobs=-1), parameters,refit=True)
+
+rf.fit(Xtrain, Ytrain)

@@ -110,7 +110,7 @@ def tester(request):
             
             else : 
                 
-                res = est.prediction(s.mlp,genre,age,hypertension,maladie,marie,travail,zone,glycemie,imc,tabac)[0]
+                res = est.prediction(s.rf,genre,age,hypertension,maladie,marie,travail,zone,glycemie,imc,tabac)[0]
             
             #=====================res = resultat de fonction de prediction 
             print ("eeeeeeeeee",res)
